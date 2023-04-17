@@ -1,0 +1,7 @@
+<app-menu *ngIf="!dontHaveCredentials  else singInTemplate">
+  <router-outlet></router-outlet>
+</app-menu>
+
+<ng-template #singInTemplate>
+  <router-outlet></router-outlet>
+</ng-template>

@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Div Responsiva com Background de Imagem</title>
+    <style>
+      /* Define o estilo para a div externa com a imagem de fundo */
+      .background-image {
+        background-image: url("../../assets/images/Miami.png");
+        background-size: cover;
+        height: 100vh; /* Define a altura da div como 100% da altura da página */
+        width: 100%; /* Define a largura da div como 100% da largura da página */
+        position: relative; /* Define a posição como relativa para posicionar a div interna */
+      }
+
+      /* Define o estilo para a div que cobre a imagem de fundo */
+      .background-overlay {
+        position: absolute; /* Define a posição como absoluta para posicionar a div em relação à div externa */
+        top: 80px; /* Adiciona um espaçamento de 80px acima da div */
+        bottom: 0; /* Define a parte inferior como 0 para preencher toda a altura da div externa */
+        left: 0; /* Define a posição esquerda como 0 */
+        right: 0; /* Define a posição direita como 0 para preencher toda a largura da div externa */
+        background-color: rgba(255, 255, 255, 0.7); /* Define a cor de fundo branca e opacidade média */
+        overflow: hidden; /* Evita que o conteúdo ultrapasse a altura da div */
+      }
+
+      /* Define o estilo para a div interna com o conteúdo */
+      .content {
+        max-height: calc(100vh - 80px); /* Define a altura máxima como a altura da página menos o espaçamento acima */
+        overflow: auto; /* Adiciona uma barra de rolagem caso o conteúdo ultrapasse a altura da div */
+        max-width: 600px; /* Define a largura máxima da div interna */
+        margin: 0 auto; /* Centraliza a div horizontalmente */
+        background-color: white; /* Define a cor de fundo branca */
+        opacity: 0.7; /* Define a opacidade média */
+        padding: 20px; /* Adiciona um espaçamento interno para o conteúdo */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-image">
+      <div class="background-overlay">
+        <div class="content">
+          <h1>Título da Div</h1>
+          <p>Conteúdo</p>
+          <!-- Adicione mais conteúdo aqui, se necessário -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

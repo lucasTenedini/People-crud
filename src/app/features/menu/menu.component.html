@@ -1,0 +1,26 @@
+<section id="menu">
+  <mat-sidenav-container class="container" (backdropClick)="close()">
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose >
+      <div class="content">
+        <div class="row" id="{{item.id}}" *ngFor="let item of menu" (click)="navigate(item.router)" routerLink="{{item.router}}" routerLinkActive="active">
+          <span>
+            <img src="assets/icons/{{item.icon}}.svg" width="22">
+            {{item.title}}
+          </span>
+        </div>
+        <div class="row" (click)="logOut()">
+          <span><img src="assets/icons/log-out.svg" width="22">Log out </span>
+
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="fixed-navbar">
+        <div class="menu-icon">
+          <img (click)="sidenav.open()" src="assets/icons/menu.svg" alt="" width="25">
+        </div>
+      </div>
+      <ng-content></ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</section>

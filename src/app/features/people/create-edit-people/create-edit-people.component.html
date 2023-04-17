@@ -1,0 +1,57 @@
+<section id="people-create-edit">
+  <div class="background-image">
+    <div class="background-overlay">
+      <ng-template #loader>
+        <app-loader> </app-loader>
+      </ng-template>
+      <div class="content" *ngIf="!loading else loader">
+        <h2>Person</h2>
+        <form [formGroup]="peopleForm">
+          <mat-form-field>
+            <label>Name</label>
+            <input formControlName="name" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Last Name</label>
+            <input formControlName="lastName" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Email</label>
+            <input formControlName="email" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Phone</label>
+            <input formControlName="phone" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Password</label>
+            <input formControlName="password" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Confirm Password</label>
+            <input formControlName="confirmPassword" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>City</label>
+            <input formControlName="city" matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <label>State</label>
+            <mat-select panelClass="custom-select" formControlName="state">
+              <mat-option *ngFor="let state of states" [value]="state.value">
+                {{state.label}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field>
+            <label>Profession</label>
+            <input formControlName="profession" matInput>
+          </mat-form-field>
+          <div class="container-button">
+            <app-button (click)="submit()">Register</app-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

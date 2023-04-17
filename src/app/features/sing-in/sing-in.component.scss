@@ -1,0 +1,61 @@
+#sing-in {
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    color: #6a6a6a;
+  }
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  ::ng-deep .sing-in-button {
+    .mat-button-base {
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .line {
+    height: 5px;
+    width: 100%;
+    display: table;
+    position: absolute;
+
+    .green {
+      background: #51b747;
+      width: 40%;
+      height: 100%;
+      display: table-cell;
+    }
+    .ocean {
+      background: #4bbd94;
+      width: 20%;
+      height: 100%;
+      display: table-cell;
+      transform: skewx(-45deg);
+      position: relative;
+      right: 29px;
+    }
+    .blue {
+      background: #7292cc;
+      width: 20%;
+      height: 100%;
+      display: table-cell;
+      transform: skewx(-45deg);
+      z-index: 2;
+      position: relative;
+      right: 29px;
+    }
+    .gray {
+      background: #656565;
+      width: 20%;
+      height: 100%;
+      display: table-cell;
+      position: relative;
+      right: 32px;
+      z-index: 1;
+    }
+  }
+}

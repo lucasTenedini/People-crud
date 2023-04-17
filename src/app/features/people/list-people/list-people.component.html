@@ -1,0 +1,27 @@
+<section id="people-list">
+  <div class="background-image">
+    <div class="background-overlay">
+      <ng-template #loader>
+        <app-loader> </app-loader>
+      </ng-template>
+      <div class="content" *ngIf="!loading else loader">
+
+        <h2>People</h2>
+        <table class="table table-hover">
+          <tbody>
+            <tr *ngFor="let person of peopleList">
+              <td>{{person.name}}</td>
+              <td>
+                <img (click)="sendToEdit(person._id)" src="assets/icons/pencil.svg" alt="" width="21">
+              </td>
+              <td>
+                <img (click)="deletePeople(person._id)" src="assets/icons/trash.svg" alt="" width="25">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <app-button (click)="sendToCreate()">New</app-button>
+      </div>
+    </div>
+  </div>
+</section>

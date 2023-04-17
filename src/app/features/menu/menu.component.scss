@@ -1,0 +1,51 @@
+#menu {
+  .container {
+    overflow-x: unset;
+    overflow-y: unset;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .content {
+    width: 280px;
+    padding: 60px 0px 30px;
+  }
+
+  .row {
+    padding: 15px;
+    color: #656565;
+    span {
+      display: flex;
+      align-items: self-end;
+      img {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .row:hover,
+  .active {
+    color: #3a9533;
+    background-color: #f6f6f6;
+    span img {
+      filter: invert(46%) sepia(11%) saturate(2885%) hue-rotate(68deg) brightness(100%) contrast(81%);
+    }
+  }
+
+  .fixed-navbar {
+    z-index: 3;
+    background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: fixed;
+    width: 95%;
+    height: 65px;
+    left: 2%;
+    .menu-icon {
+      margin: 15px 20px;
+    }
+  }
+}

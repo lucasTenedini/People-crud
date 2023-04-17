@@ -1,0 +1,15 @@
+#button {
+  .container {
+    text-align: center;
+  }
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: #4b9c44;
+  height: 100%;
+  width: 88%;
+  padding: 6px 0;
+}

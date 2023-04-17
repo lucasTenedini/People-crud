@@ -1,0 +1,26 @@
+<section id="sing-in">
+  <div class="container">
+    <div class="content">
+      <div class="line">
+        <div class="green"></div>
+        <div class="ocean"></div>
+        <div class="blue"></div>
+        <div class="gray"></div>
+    </div>
+      <h2>Sing in to start yout session</h2>
+      <form [formGroup]="singInForm">
+        <mat-form-field>
+          <label>Username</label>
+          <input formControlName="userName" matInput>
+        </mat-form-field>
+        <mat-form-field>
+          <label>Password</label>
+          <input formControlName="password" matInput>
+        </mat-form-field>
+        <div class="container-button">
+          <app-button (click)="submit()" class="sing-in-button">Sing in</app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
