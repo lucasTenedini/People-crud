@@ -17,45 +17,54 @@
     }
   }
 
-  .line {
-    height: 5px;
-    width: 100%;
-    display: table;
-    position: fixed;
-
-    .green {
-      background: #51b747;
-      width: 40%;
-      height: 100%;
-      display: table-cell;
-    }
-    .ocean {
-      background: #4bbd94;
-      width: 20%;
-      height: 100%;
-      display: table-cell;
-      transform: skewx(-45deg);
-      position: relative;
-      right: 29px;
-    }
-    .blue {
-      background: #7292cc;
-      width: 20%;
-      height: 100%;
-      display: table-cell;
-      transform: skewx(-45deg);
-      z-index: 2;
-      position: relative;
-      right: 29px;
-    }
-    .gray {
-      background: #656565;
-      width: 20%;
-      height: 100%;
-      display: table-cell;
-      position: relative;
-      right: 32px;
-      z-index: 1;
-    }
+  .color-line {
+    display: flex;
+    height: 4px;
+    overflow: hidden;
   }
+
+  .color-block {
+    width: 20%;
+    height: 100%;
+  }
+
+  .color-block.first {
+    width: 40%;
+    background-color: #51b747;
+  }
+
+  .color-block:nth-child(2),
+  .color-block:nth-child(3) {
+    position: relative;
+    z-index: 1;
+  }
+
+  .color-block:nth-child(2)::before,
+  .color-block:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+  }
+
+  .color-block:nth-child(2)::before {
+    right: -15%;
+    transform: skewX(-45deg);
+    width: 124%;
+    background-color: #4bbd94;
+  }
+
+  .color-block:nth-child(3)::after {
+    left: 8%;
+    transform: skewX(-45deg);
+    width: 105%;
+    background-color: #7292cc;
+
+  }
+
+  .color-block:nth-child(4) {
+    background-color: #656565;
+  }
+
 }
