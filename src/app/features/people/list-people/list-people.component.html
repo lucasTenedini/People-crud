@@ -10,7 +10,7 @@
         <table class="table table-hover">
           <tbody>
             <tr *ngFor="let person of peopleList">
-              <td>{{person.name}}</td>
+              <td>{{person.name}} {{person.lastName}}</td>
               <td>
                 <img (click)="sendToEdit(person._id)" src="assets/icons/pencil.svg" alt="" width="21">
               </td>
