@@ -1,0 +1,15 @@
+#job-list {
+  .background-image {
+    background-image: url("../../../../assets/images/Brooklyn.png");
+  }
+
+  table {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 40px;
+    td:nth-child(1) {
+      line-break: anywhere;
+      width: 80%;
+    }
+  }
+}

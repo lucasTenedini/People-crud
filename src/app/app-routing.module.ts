@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
   { path: 'test', component: TestComponent, canActivate: [AuthGuardService] },
   { path: 'people', loadChildren: () => import('./features/people/people.module').then(m => m.PeopleModule), canActivate: [AuthGuardService] },
+  { path: 'jobs', loadChildren: () => import('./features/jobs/jobs.module').then(m => m.JobsModule), canActivate: [AuthGuardService] },
   { path: '**', component: HomeComponent, canActivate: [AuthGuardService] },
 ];
 

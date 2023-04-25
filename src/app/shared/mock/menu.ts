@@ -11,7 +11,7 @@ export const MENU: Menu[] = [
       id:2,
       title:"Jobs",
       icon:"jobs",
-      router: "/this/route/dosent/exist"
+      router: "/jobs"
   },
   {
       id:3,

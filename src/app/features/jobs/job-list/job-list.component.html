@@ -1,0 +1,26 @@
+<section id="job-list">
+  <div class="background-image">
+    <div class="background-overlay">
+      <ng-template #loader>
+        <app-loader> </app-loader>
+      </ng-template>
+      <div class="content" *ngIf="!loading else loader">
+        <h2>Job</h2>
+        <table class="table table-hover">
+          <tbody>
+            <tr *ngFor="let job of jobList">
+              <td>{{job.name}}</td>
+              <td>
+                <img (click)="sendToEdit(job._id)" src="assets/icons/pencil.svg" alt="" width="21">
+              </td>
+              <td>
+                <img (click)="deleteJob(job._id)" src="assets/icons/trash.svg" alt="" width="25">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <app-button (click)="sendToCreate()">New</app-button>
+      </div>
+    </div>
+  </div>
+</section>
